@@ -53,31 +53,31 @@ def merge(left, right):
 # 메인 함수
 def main():
     # 데이터 갯수 입력
-    num_elements = int(input("Enter the number of elements: "))
+    num_elements = int(input("데이터의 갯수를 입력하세요 : "))
 
     # 입력받은 갯수만큼 랜덤 리스트 생성
     data = [random.randint(1, 1001) for _ in range(num_elements)]
 
     # 원본 데이터 출력
-    print("Original data:", data)
+    print("원본 데이터 :", data)
 
     # 버블 정렬 실행 및 시간 측정
     start_time = time.time()
     bubble_sorted = bubble_sort(data.copy())
     bubble_time = time.time() - start_time
-    print(f"Bubble sort result: {bubble_sorted} (Time: {bubble_time:.6f} seconds)")
+    print(f"버블 정렬 결과 : {bubble_sorted} (Time: {bubble_time:.6f} seconds)")
 
     # 퀵 정렬 실행 및 시간 측정
     start_time = time.time()
     quick_sorted = quick_sort(data.copy())
     quick_time = time.time() - start_time
-    print(f"Quick sort result: {quick_sorted} (Time: {quick_time:.6f} seconds)")
+    print(f"퀵 정렬 결과 : {quick_sorted} (Time: {quick_time:.6f} seconds)")
 
     # 합병 정렬 실행 및 시간 측정
     start_time = time.time()
     merge_sorted = merge_sort(data.copy())
     merge_time = time.time() - start_time
-    print(f"Merge sort result: {merge_sorted} (Time: {merge_time:.6f} seconds)")
+    print(f"합병 정렬 결과 : {merge_sorted} (Time: {merge_time:.6f} seconds)")
 
     # 그래프 그리기
     fig, axs = plt.subplots(3, figsize=(8, 12))  # 3개의 서브 플롯 생성
